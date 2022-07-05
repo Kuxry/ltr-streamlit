@@ -24,6 +24,7 @@ class NeuralRanker():
             nn.Linear(128, 64), nn.GELU(),
             nn.Linear(64, 32), nn.GELU(),
             nn.Linear(32, 1), nn.GELU())
+
         self.optimizer = optim.Adam(self.sf.parameters(), lr=0.0001, weight_decay=0.0001)
 
     def eval_mode(self):
